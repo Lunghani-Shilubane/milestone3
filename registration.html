@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration</title>
+</head>
+
+
+<style>
+    
+  .nav-center { 
+        background-color: rgb(0, 0, 0);
+    }
+
+    .nav-center a {
+        color: white;
+    }
+
+    .search-btn svg path {
+        fill: rgb(0, 0, 0);
+    }
+
+
+    .reg-form {
+        display: flex;
+        justify-content: space-between;
+        padding: 150px 50px 50px 50px;
+        gap: 20px;
+    }
+
+    .left-reg, .middle-reg, .right-reg {
+        
+        padding: 20px;
+        border-radius: 8px;
+        width: 32%;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+        justify-content: center
+       
+    }
+
+   
+
+
+
+    
+      h1::after {
+      content: "";
+      display: block;
+      width: 325px;
+      height: 2px;
+      background: #000000;
+      margin: 18px auto 0;
+      opacity: 0.9;
+      border-radius: 2px;
+      position: relative;
+      right: 95px;
+        
+    }  
+    
+    
+    .reg-form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        text-align: left;
+        width: 60%;
+    }
+
+    /* Container for checkbox groups */
+
+
+/* Each checkbox + label block */
+
+
+    .reg-form input[type="text"],
+    .reg-form input[type="number"],
+    .reg-form input[type="email"],
+    .reg-form select {
+        width: 70%;
+        height: 40px;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+        background-color: white;
+    }
+
+    .reg-form textarea {
+        width: 70%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+        background-color: white;
+    }
+
+    .btns {
+    display: flex;
+    flex-direction: column;     
+    align-items: center;       
+    gap: 20px;            
+    margin-top: 20px;
+    transform: translateX(-15%);
+}
+
+
+.apply-btn {
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        border: 2px solid #000000;
+        padding: 10px 20px;
+        gap: 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        width: 250px;
+        height: 40px;
+    }
+
+
+    .quote-btn {
+        background-color: #0b1388;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        width: 250px;
+        height: 40px;
+    }
+
+    .submit-btn{
+      background-color: #000000;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        width: 250px;
+        height: 40px;
+        transform: translateX(25%);
+
+    }
+
+    
+    #vat {
+      width: 70%;
+        height: 40px;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+        background-color: white;
+    }
+
+    .checkbox-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.checkbox-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 48%;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin: 0;
+}
+
+.checkbox-item label {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.checkbox-item label span {
+  font-weight: normal;
+  font-size: 12px;
+  color: #555;
+}
+
+</style>
+
+
+
+
+<body>
+   <nav class="top-nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <div class="nav-left">
+          <a class="logo" href="index.html" aria-label="Home">
+            <img src="/img/logoBlack.png" alt="Website logo" />
+          </a>
+        </div>
+
+        <div class="nav-center" role="navigation" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="6month.html">6 Months</a>
+          <a href="6week.html">6 Weeks</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-right">
+          <button id="searchBtn" class="search-btn" aria-label="Open search">
+            <!-- simple search magnifier SVG -->
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM4 9.5C4 6.46 6.46 4 9.5 4S15 6.46 15 9.5 12.54 15 9.5 15 4 12.54 4 9.5z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav> 
+
+<div class="reg-form">
+
+
+
+<div class="left-reg">
+    <h1>01</h1>
+    <h2>DETAILS</h2>
+    <form>
+        <label for="username">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="number">Phone Number</label>
+        <input type="number" id="number" name="phone number" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+    </form>
+
+    <p>You can select more than 1 course</p>
+
+    <p>Six Months Courses</p>
+<div class="checkbox-grid">
+   
+  <div class="checkbox-grid">
+  <form>
+    <div class="checkbox-column">
+      <div class="checkbox-item">
+        <input type="checkbox" id="course1" name="course1" value="First Aid">
+        <label for="course1">FIRST AID <span>R 1500</span></label>
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox" id="course2" name="course2" value="Sewing">
+        <label for="course2">SEWING <span>R 1500</span></label>
+      </div>
+    </div>
+
+    <div class="checkbox-column">
+      <div class="checkbox-item">
+        <input type="checkbox" id="course3" name="course3" value="Landscaping">
+        <label for="course3">LANDSCAPING <span>R 1500</span></label>
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox" id="course4" name="course4" value="Life Skills">
+        <label for="course4">LIFE SKILLS <span>R 1500</span></label>
+      </div>
+    </div>
+  </form>
+</div>
+
+</div>
+
+
+
+
+    <p>Six Weeks Courses</p>
+
+    <form>
+      <input type="checkbox" id="course5" name="course5" value="Child minding">
+      <label for="course5"> CHILD MINDING <P>R 750</P></label><br>
+      <input type="checkbox" id="course6" name="course6" value="Cooking">
+      <label for="course6"> COOKING <P>R 750</P></label><br>
+      <input type="checkbox" id="course7" name="course7" value="Garden Maintenance">
+      <label for="course7"> GARDEN MAINTENANCE <P>R 750</P></label>
+    </form>  
+</div>
+
+
+<div class="middle-reg">
+    <h1>02</h1>
+    <h2>CALCULATION OF QUOTE</h2>
+    <form>
+        <label for="subtotal">Subtotal</label>
+        <input type="number" id="subtotal" name="subtotal" readonly disabled>
+
+        <label for="discount">Discount</label>
+        <input type="number" id="discount" name="discount" readonly disabled>
+
+        <label for="vat">Vat (15%)</label>
+        <input type="" id="vat" name="vat" readonly disabled>
+
+        <label for="total">Total Quote</label>
+        <input type="number" id="total" name="total" readonly disabled>
+
+<div class="btns">
+        <button class="apply-btn">APPLY</button>
+        <button class="quote-btn">GET A QUOTE</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="right-reg">
+
+    <h1>03</h1>
+    <h2>CONTACT FORM</h2>
+    <form>
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" name="contact-name" required>
+
+        <label for="contact-email">Email Address</label>
+        <input type="email" id="contact-email" name="contact-email" required>
+
+        <label for="venue">Select A Venue</label>
+        <select id="venue" name="venue" required>
+            <option value="johannesburg">Sharpeville</option>
+            <option value="pretoria">Soweto</option>
+            <option value="cape-town">Alexandra</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button class="submit-btn">SUBMIT</button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

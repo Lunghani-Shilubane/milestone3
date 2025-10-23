@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Home</title>
+
+    <style>
+
+    .bg {
+        min-height: 100vh;
+        width: 100%;
+        background-image: url('/img/bannerWeb.png');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;  /* Change from fixed to absolute */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+      
+
+
+        .intro-section {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 150px 20px 100px 20px;
+            font-family: 'Arial', sans-serif;
+            width: 40%;
+            text-align: left;
+            margin-left: 50%;
+        }
+    
+        .intro-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+
+        }
+
+        .intro-section h1::after {
+      content: "";
+      display: block;
+      width: 280px;
+      height: 2px;
+      background: #ffffff;
+      margin: 18px auto 0;
+      opacity: 0.9;
+      border-radius: 2px;
+      position: relative;
+      right: 230px;
+      
+    }
+
+    
+        .intro-about {
+            font-size: 20px;
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+            text-align: left;
+            position: relative;
+            right: 120px;
+        }
+    
+        .intro-section button {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 210px;
+            height: auto;
+        }
+
+        .intro-section button a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+        }
+    
+        .intro-section button:hover {
+             background-color: #8d8d8dbe;
+        }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="bg">
+        <div class="overlay">
+        <nav class="top-nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <div class="nav-left">
+          <a class="logo" href="index.html" aria-label="Home">
+            <img src="/img/logo_white.png" alt="Website logo" />
+          </a>
+        </div>
+
+        <div class="nav-center" role="navigation" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="6month.html">6 Months</a>
+          <a href="6week.html">6 Weeks</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-right">
+          <button id="searchBtn" class="search-btn" aria-label="Open search">
+            <!-- simple search magnifier SVG -->
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM4 9.5C4 6.46 6.46 4 9.5 4S15 6.46 15 9.5 12.54 15 9.5 15 4 12.54 4 9.5z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+        <div class="intro-section">
+            <h1>EMPOWERING THE NATION</h1>
+
+            <p class="intro-about">
+                Empowering the Nation was established in 2022 and offers courses in Johannesburg. 
+                Hundreds of domestic workers and gardeners have been trained on both the six-months long Learnerships 
+                and six-week Short Skills Training Programs to empower themselves and can provide more marketable skills.
+            </p>
+            <button><a href="/6months">GET STARTED</a></button>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>

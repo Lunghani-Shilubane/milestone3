@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>6 Month Course Information</title>
+</head>
+
+<style>
+    
+  .nav-center { 
+        background-color: rgb(0, 0, 0);
+    }
+
+    .nav-center a {
+        color: white;
+    }
+
+    .search-btn svg path {
+        fill: rgb(0, 0, 0);
+    }
+
+    .scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 50px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    padding-bottom: 100px;
+   
+    }
+    
+
+     .card {
+      position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: sans-serif;
+  flex-shrink: 0;
+
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .card-text {
+      position: absolute;
+      top: 30%; left: 50%;
+      transform: translate(-50%, -40%);
+      color: white;
+      z-index: 2;
+      text-align: left;
+      padding: 0 10px;
+    }
+
+    .card-text .course-title {
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+
+    .card-text .course-title::after {
+      content: "";
+      display: block;
+      width: 150px;
+      height: 2px;
+      background: #ffffff;
+      margin: 10px auto 0;
+      opacity: 0.9;
+      border-radius: 2px;
+      
+    }
+
+    .card-text p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+   
+
+    .content {
+   display: flex;
+  gap: 30px;
+  flex-direction: row;
+  width: max-content;
+
+
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 325px;
+  height: 650px;
+  box-sizing: border-box;
+
+}
+
+
+.detail h1::after {
+      content: "";
+      display: block;
+      width: 325px;
+      height: 2px;
+      background: #000000;
+      margin: 18px auto 0;
+      opacity: 0.9;
+      border-radius: 2px;
+        
+        
+      
+    }
+
+    .detail ul {
+        padding-left: 0;
+        margin: 0 0 10px 0;
+        list-style-position: inside;
+    }
+
+
+    .info {
+ 
+  display: block;
+ 
+  
+  margin-bottom: 10px;
+  
+
+}
+
+.apply {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apply button {
+  width: 210px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+.price {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    z-index: 2;
+}
+
+
+
+
+
+
+</style>
+
+
+
+<body>
+
+     <nav class="top-nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <div class="nav-left">
+          <a class="logo" href="index.html" aria-label="Home">
+            <img src="/img/logoBlack.png" alt="Website logo" />
+          </a>
+        </div>
+
+        <div class="nav-center" role="navigation" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="6month.html">6 Months</a>
+          <a href="6week.html">6 Weeks</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-right">
+          <button id="searchBtn" class="search-btn" aria-label="Open search">
+            <!-- simple search magnifier SVG -->
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM4 9.5C4 6.46 6.46 4 9.5 4S15 6.46 15 9.5 12.54 15 9.5 15 4 12.54 4 9.5z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+
+    
+
+
+
+
+    
+    
+<div class="scroll-wrapper">
+    <div class="content">
+
+<div class="detail">
+    <div class="info">
+    <h1>01</h1>
+    <h2>FIRST AID</h2>
+    <ul>
+        <li>Wounds and bleeding</li>
+        <li>Burns and fractures</li>
+        <li>Emergency scene</li>
+        <li>Cardio-Pulmonary Resucitation (CPR)</li>
+        <li>Respitory distress e.g. choking, blocked airway</li>
+    </ul>
+</div>
+        <div class="card">
+        <img src="/img/web_images/firstaid.png" alt="Background">
+        
+        <div class="apply">
+            <button> APPLY </button>
+        </div>
+        <p class="price">R 1500</p>
+    </div>
+
+    </div>
+
+
+
+<div class="detail">
+    <div class="info">
+    <h1>02</h1>
+    <h2>SEWING</h2>
+    <ul>
+        <li>Types of stitches</li>
+        <li>Threading a sewing machine</li>
+        <li>Sewing buttons, zips, hems and seams</li>
+        <li>Alterations</li>
+        <li>Designing and sewing new garments</li>
+    </ul>
+</div>
+     <div class="card">
+        <img src="/img/web_images/sewing.png" alt="Background">
+        
+        <div class="apply">
+            <button> 
+                    APPLY
+            </button>
+        </div>
+        <p class="price">R 1500</p>
+    </div>
+
+    </div>
+
+
+
+
+    <div class="detail">
+        <div class="info">
+    <h1>03</h1>
+    <h2>LANDSCAPING</h2>
+    <ul>
+        <li>Indigenous and exotic plants and trees</li>
+        <li>Fixrd structures (fountains, statues, banches, tables, built-in braai)</li>
+        <li>Balancing of plants and trees in a garden</li>
+        <li>Aesthetic of plant shapes and colours</li>
+        <li>Garden layout</li>
+    </ul>
+</div>
+     <div class="card">
+        <img src="/img/web_images/landscaping.png" alt="Background">
+        
+        <div class="apply">
+            <button> 
+                    APPLY
+            </button>
+        </div>
+        <p class="price">R 1500</p>
+    </div>
+
+    </div>
+
+
+
+
+
+    <div class="detail">
+        <div class="info">
+    <h1>04</h1>
+    <h2>LIFE SKILLS</h2>
+    <ul>
+        <li>Opening a bank account</li>
+        <li>Basic labour law (know your rights)</li>
+        <li>Baasic reading and writing literacy</li>
+        <li>Basic numeric literacy</li>
+    </ul>
+</div>
+     <div class="card">
+        <img src="/img/web_images/lifeskills.png" alt="Background">
+        
+        <div class="apply">
+            <button> 
+                    APPLY
+            </button>
+        </div>
+        <p class="price">R 1500</p>
+    </div>
+</div>
+
+    
+</div>
+
+</body>
+</html>

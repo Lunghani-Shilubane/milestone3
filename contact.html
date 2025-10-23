@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact</title>
+</head>
+
+<style>
+    .nav-center { 
+        background-color: rgb(0, 0, 0);
+    }
+
+    .nav-center a {
+        color: white;
+    }
+
+    .search-btn svg path {
+        fill: rgb(0, 0, 0);
+    }
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 200px 60px;
+  gap: 30px;
+}
+
+.left-contact,
+.right-contact {
+  width: 45%;
+  padding: 30px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+
+    .left-contact div,
+.right-contact div {
+  margin-bottom: 15px;
+}
+
+.left-contact img,
+.right-contact img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.right-contact h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.right-contact p {
+  font-size: 18px;
+}
+
+
+
+.right-contact button {
+  display: block;
+  gap: 20px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+   font-size: 16px;
+  padding: 14px 24px;
+  width: 50%;
+  max-width: 400px;
+  transform: translateX(-50%);
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align buttons to the left inside the column */
+  gap: 15px; /* Space between buttons */
+  margin-top: 20px;
+  
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.icon-text img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  margin-right: 50px;
+  
+}
+
+.right-contact img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.right-contact div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.right-contact p {
+  margin: 0;
+}
+
+.map {
+  width: 100%;
+  margin-top: 40px;
+  background-color: #e0e0e0;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+}
+</style>
+
+
+<body>
+
+    <nav class="top-nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <div class="nav-left">
+          <a class="logo" href="index.html" aria-label="Home">
+            <img src="/img/logoBlack.png" alt="Website logo" />
+          </a>
+        </div>
+
+        <div class="nav-center" role="navigation" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="6month.html">6 Months</a>
+          <a href="6week.html">6 Weeks</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-right">
+          <button id="searchBtn" class="search-btn" aria-label="Open search">
+            <!-- simple search magnifier SVG -->
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM4 9.5C4 6.46 6.46 4 9.5 4S15 6.46 15 9.5 12.54 15 9.5 15 4 12.54 4 9.5z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav> 
+
+
+
+
+    <div class="contact-info">
+
+        <div class="left-contact">
+  <h1>01</h1>
+
+  <div class="icon-text">
+    <img src="/img/phone-call.png" alt="Phone call">
+    <span>+27 73 456 7891</span>
+  </div>
+
+  <div class="icon-text">
+    <img src="/img/location.png" alt="location">
+    <span>Sharpeville | Soweto | Alexandra</span>
+  </div>
+
+  <div class="social-icons">
+    <img src="/img/facebook.png" alt="facebook">
+    <img src="/img/twitter.png" alt="twitter">
+    <img src="/img/instagram.png" alt="instagram">
+    <img src="/img/linkedin.png" alt="linkedin">
+  </div>
+</div>
+
+        <div class="right-contact">
+            <h1>02</h1>
+            <div>
+                <img src="/img/mail.png" alt="" srcset="">
+                <p>info@empoweringthenation.com</p>
+            </div>
+            <div class="btn-group">
+                <button>FILL OUT OUR CONTACT FORM</button>
+                <button>VIEW INSTITUTION CREDENTIALS</button>
+            </div>
+        </div>
+        
+        
+        <div class="map">hello</div>
+
+
+    </div>
+
+    
+</body>
+</html>
